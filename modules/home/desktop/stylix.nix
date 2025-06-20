@@ -25,6 +25,7 @@
     targets = {
       nvf.enable = false;
       helix.enable = false;
+      emacs.enable = false;
     };
   };
 in {

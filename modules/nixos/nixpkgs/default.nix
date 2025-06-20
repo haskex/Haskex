@@ -47,19 +47,30 @@ in {
     })
 
     (mkIf (config.np.defaultPackages) {
-      environment.systemPackages =
+      environment.systemPackages = with pkgs;
         config.np.packages
         ++ [
-          pkgs.bluez
-          pkgs.libnotify
-          pkgs.pulseaudio
-          pkgs.nodejs
-          pkgs.unzip
-          pkgs.sqlite
-          pkgs.home-manager
-          pkgs.wget
-          pkgs.nil
-          pkgs.alejandra
+          bluez
+          libnotify
+          pulseaudio
+          nodejs
+          unzip
+          sqlite
+          home-manager
+          wget
+
+          # LSPs
+            # Nix
+              nil
+              alejandra
+
+            # Haskell
+              ghc
+              haskellPackages.haskell-language-server
+              stack
+
+            # Lisp is life!!!
+              sbcl
         ];
     })
 

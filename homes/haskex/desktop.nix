@@ -19,4 +19,6 @@
 
     menus.rofi.enable = true;
   };
+
+  programs.emacs.enable = true;
 }
