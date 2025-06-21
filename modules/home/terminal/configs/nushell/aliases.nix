@@ -13,6 +13,9 @@
   code = "hx";
   cat = "${pkgs.bat}/bin/bat";
   read = "cat";
+  doom = "~/.config/emacs/bin/doom";
+
+  emcs = "doom run -nw";
 
   matrix = "${pkgs.cmatrix}/bin/cmatrix -C blue -m";
 }
